@@ -1,0 +1,73 @@
+.title-login{
+    margin-top: 50px;
+    color: azure;
+}
+/* .title-login-re{
+    margin-top: 100px;
+    margin-left: 10px;
+    color: azure;
+} */
+img{
+    width: 60px;
+    height:60px;
+    margin-top: 40px;
+
+    border: solid 2px;
+    border-radius: 50px;
+}
+.body-login{
+
+    background: url(../components/assets/foto.jpg) rgba(0,0,0,0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken; 
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    height: 100vh;
+
+}
+.body-centro{
+    border: solid 2px;
+    border-radius: 10px;
+    width: 300px;
+    height: auto ;
+    position: relative;
+    background-color: rgb(131, 123, 123);
+
+    margin-top: 150px;
+    margin-left: 30px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+
+    line-height: 1.5;
+}
+Form{
+    margin-top: 35px;
+    color: azure;
+}
+Form label{
+    margin-top: 13px;
+}
+.new{
+    display: flex;
+    margin-top: 15px;
+    color: azure;
+}
+.new-re{
+    display: flex;
+    margin-top: 35px;
+    color: azure;
+}
+.nav-re{
+    color:red;
+    padding: 0 4px;
+    text-decoration: none;
+}
