@@ -4,7 +4,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
-import {Routes, Route, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import AuthService from "../services/auth.service";
 
@@ -18,8 +18,6 @@ const required = (value) => {
     }
 
 };
-
-//invalid-feedback d-block
 
 const Login = () => {
     

@@ -1,11 +1,8 @@
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 
-import AuthService from '../services/auth.service'
+import Nav from "./nav";
 
-import EventBus from '../common/event-bus'
-
-import {Routes, Route, Link} from "react-router-dom";
 
 function Formulario(){
 
@@ -16,6 +13,7 @@ function Formulario(){
 
     useEffect(()=>{
        buscarTodos();
+       
     },[atualizar]);
 
     function handleChange(event){
@@ -67,6 +65,7 @@ function Formulario(){
             }
         
         limpar();
+        console.log(servico.dataInicio)
     }
 
     function excluir(id){
@@ -82,79 +81,11 @@ function Formulario(){
     
     }
 
-
-    const [currentUser, setCurrentUser] = useState(undefined);
-
-    useEffect(() => {
-        const user = AuthService.getCurrentUser();
-
-        if (user){
-        setCurrentUser(user);
-        }
-
-        EventBus.on("logout", () => {
-        logOut();
-        });
-
-
-    }, []);
-
-    const logOut = () => {
-        AuthService.logout();
-        setCurrentUser(undefined);
-    }
-
     return(
 
-        //navbar navbar-expand
-        //navbar-nav ml-auto
-        //nav-item
-        //nav-
-        //nav-item
-        //nav-link
-        //navbar-nav ml-auto
         <div className='servico'>
-             
-            <nav className="nav-user">
 
-                    {currentUser ? (
-                    <div className="nav-items">
-
-                        <li className="">
-                        
-                            <Link to={"/"} className="">
-                                <strong>{currentUser.username}</strong>  
-                            </Link>
-                        </li>
-                    
-                        <li className="">
-                            <a href="/" className="" onClick={logOut}>
-                                Sair
-                            </a>
-                        </li>
-                        
-                    </div>
-                    ) : (
-
-                    <div className="">
-
-                        <li className="">
-                        <Link to={"/"} className="">
-                            Login
-                        </Link>
-                        </li>
-
-                        <li className="">
-                        <Link to={"/register"} className="">
-                            Sign Up
-                        </Link>
-                        </li>
-                    </div>
-                    )}
-
-            </nav>
-
-
+            <Nav/>
 
             <h1 className='title-form'>Cadastrar Serviços</h1>
 
@@ -163,13 +94,13 @@ function Formulario(){
                 <div>
 
                     <div className='campo-servico'>
-                        <label>Nome</label>
+                        <label>Nome do Cliente</label>
                         <input className='input-servico' onChange={handleChange} value={servico.nomeCliente || ''} name="nomeCliente" type="text" />
                     </div>
 
                     <div className='campo-servico'>
                         <label>Data do Inicio</label>
-                        <input className='input-servico' onChange={handleChange} value={servico.dataInicio || ''} name="dataInicio" type="date" />
+                        <input className='input-servico' onChange={handleChange} value={servico.dataInicio || ''} name="dataInicio"  type="date"/>
                     </div>
 
                     <div className='campo-servico'>
@@ -218,12 +149,12 @@ function Formulario(){
 
             </div>
             
-
+            
             <table>
                 <thead>
 
                     <tr>
-                        <th>Nome</th>
+                        <th>Cliente</th>
                         <th>Data Inicio</th>
                         <th>Data Termino</th>
                         <th>Descrição Serviço</th>
@@ -237,11 +168,11 @@ function Formulario(){
 
                 </thead>
 
-                <tbody>
+                <tbody className='resposta'>
 
                     {servicos.map(serv => (
 
-                        <tr key={serv.id}>
+                        <tr key={serv.id} >
                 
                             <td>{serv.nomeCliente}</td>
                             <td>{serv.dataInicio}</td>
@@ -251,7 +182,7 @@ function Formulario(){
                             <td>{serv.valorPago}</td>
                             <td>{serv.dataPagamento}</td>
                             <td>{serv.status}</td>
-                            <td>
+                            <td className='button-resposta'>
                                 <button onClick={()=>setServico(serv)} className='todos'>Alterar</button>
                                 <button onClick={()=>excluir(serv.id)} className='excluir'>Excluir</button>
                                 <button onClick={()=>cancelar(serv.id)} className='cancelado'>Cancelar</button>

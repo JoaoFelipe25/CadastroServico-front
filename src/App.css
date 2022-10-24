@@ -15,24 +15,18 @@
   background-color: rgb(140, 193, 240);
 }
 .nav-user{
-  /* background-color: brown; */
   width: 100%;
-
   display: flex;
   justify-content: end;
-  
   line-height: 2;
 }
 .nav-items{
   display: flex;
   justify-content: space-around;
   width: 150px;
-  /* background-color: aqua; */
-
   font-size: 20px;
   margin-right: 80px;
   margin-top: 30px;
-
 }
 .nav-items li{
   list-style-type: none;
@@ -56,8 +50,7 @@
   display: block;
   width: 450px;
   height: 30px;
-  border-radius: 5px;  
-  
+  border-radius: 5px; 
 }
 .button-form{
   margin-top: 20px;
@@ -89,7 +82,7 @@
   transition: 0.3s;
 }
 
-/*----- estilo resposta do formulario ----*/
+/*----- estilo botao do formulario ----*/
 
 .button-buscas{
   margin-top: 80px;
@@ -121,32 +114,32 @@
   color: white;
 }
 
+/*---------------tabela resposta--------------------*/
 table{
   background-color: azure;
   margin-top: 50px;
   border-radius: 10px;
 }
+
 thead{
   margin-top: 140px;
 }
+
 th{
-  padding: 5px;
+  padding: 15px;
   line-height: 3;
 }
 tr{
   margin-top: 50px;
 }
-
-tbody{
-  border: solid 5px red;
-}
-td{
-  padding: 5px;
-  border: solid 2px gray;
-  border-radius: 10px;
+.resposta td{
+  padding: 15px;
+  border: solid 2px  gray;
 }
 
-td button{
+/*-----------------------------------*/
+
+.button-resposta button{
   width: 50px;
   display: flex;
   justify-content: space-around;
@@ -157,7 +150,7 @@ td button{
   border-radius: 5px;
   margin-top: 5px;
 }
-td button:hover{
+.button-resposta button:hover{
   background-color: gray;
   transition: 0.5s;
 }
