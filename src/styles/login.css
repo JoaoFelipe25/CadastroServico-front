@@ -44,6 +44,24 @@ Form{
 Form label{
     margin-top: 13px;
 }
+.input-login{
+    border-radius: 10px;
+    height: 30px;
+    width: 100%;
+}
+.button-login{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(8, 130, 238);
+    color: white;
+}
+.button-login:hover{
+    background-color: rgb(8, 64, 114);
+    transition: 0.5s;
+}
+
 .new{
     display: flex;
     margin-top: 15px;

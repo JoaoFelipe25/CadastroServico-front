@@ -135,6 +135,7 @@ tr{
 .resposta td{
   padding: 15px;
   border: solid 2px  gray;
+  border-radius: 15px;
 }
 
 /*-----------------------------------*/

@@ -125,11 +125,11 @@ const Register = (props) => {
                         {
                             !successful && (
                                 <div >
-                                    <div className="form-group">
+                                    <div >
                                         <label htmlFor="username">Nome</label>
                                         <Input
                                             type="text"
-                                            className="form-control"
+                                            className="input-login"
                                             name="username"
                                             value={username}
                                             onChange={onChangeUsername}
@@ -138,11 +138,11 @@ const Register = (props) => {
                                         />
                                     </div>
 
-                                    <div className="form-group">
+                                    <div>
                                         <label htmlFor="email">Email</label>
                                         <Input
                                             type="text"
-                                            className="form-control"
+                                            className="input-login"
                                             name="email"
                                             value={email}
                                             onChange={onChangeEmail}
@@ -151,11 +151,11 @@ const Register = (props) => {
                                         />
                                     </div>
 
-                                    <div className="form-group">
+                                    <div >
                                         <label htmlFor="password">Senha</label>
                                         <Input
                                             type="password"
-                                            className="form-control"
+                                            className="input-login"
                                             name="password"
                                             value={password}
                                             onChange={onChangePassword}
@@ -163,15 +163,18 @@ const Register = (props) => {
                                             placeholder="Senha"
                                         />
                                     </div>
+
                                     <br />
-                                    <div className="form-group">
-                                        <button className="btn btn-primary btn-block">Cadastrar</button>
+
+                                    <div>
+                                        <button className="button-login">Cadastrar</button>
                                     </div>
+
                                 </div>
                             )}
 
                             {message && (
-                            <div className="form-group">
+                            <div>
                                 <div
                                     className={
                                         successful ? "alert alert-success" : "alert alert-danger"

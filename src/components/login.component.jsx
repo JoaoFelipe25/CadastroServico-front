@@ -98,7 +98,7 @@ const Login = () => {
                             <label htmlFor="username">Nome</label>
                             <Input
                                 type="text"
-                                className="form-control"
+                                className="input-login"
                                 name="username"
                                 value={username}
                                 onChange={onChangeUsername}
@@ -115,7 +115,7 @@ const Login = () => {
                             <label htmlFor="password">Senha</label>
                             <Input
                                 type="password"
-                                className="form-control"
+                                className="input-login"
                                 name="password"
                                 value={password}
                                 onChange={onChangePassword}
@@ -128,7 +128,7 @@ const Login = () => {
                         <br />
 
                         <div className="form-group">
-                            <button className="btn btn-primary btn-block" disabled={loading}>
+                            <button className="button-login" disabled={loading}>
                                 {loading && (
                                     <span className="spinner-border spinner-border-sm"></span>
                                 )}
@@ -137,8 +137,8 @@ const Login = () => {
                         </div>
 
                         {message && (
-                            <div className="form-group">
-                                <div className="alert alert-danger" role="alert">
+                            <div>
+                                <div className="message" role="alert">
                                     {message}
                                 </div>
                             </div>
